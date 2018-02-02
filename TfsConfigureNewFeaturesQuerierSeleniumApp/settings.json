@@ -1,0 +1,8 @@
+﻿{
+  "instance": "<Your Instance>:8080/tfs",
+  "collectionName": "DefaultCollection",
+  "http": "http",
+  "projectNamesFilePath": ".\\projects.txt",
+  "ImplicitWaitSeconds": 20,
+  "MaxProjectsToScan": 1000
+}
