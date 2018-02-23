@@ -12,6 +12,7 @@ namespace TfsConfigureNewFeaturesQuerierSeleniumApp
         public string CollectionName { get; set; }
         public string Http { get; set; }
         public string ProjectNamesFilePath { get; set; }
+        public string ConfigureIfPossible { get; set; }
         public int ImplicitWaitSeconds { get; set; }
         public int? MaxProjectsToScan { get; set; }
     }

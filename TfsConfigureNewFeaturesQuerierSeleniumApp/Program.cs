@@ -26,6 +26,8 @@ namespace TfsConfigureNewFeaturesQuerierSeleniumApp
             var rootUrl = AppSettings.Http + "://" + AppSettings.Instance;
             var collectionUrl = rootUrl + "/" + AppSettings.CollectionName + "/";
 
+            var configureIfPossible = bool.Parse(AppSettings.ConfigureIfPossible);
+            
             var projectNames = LoadListOfProjectNames();
             var genericProjectAdminUrl = collectionUrl + "{0}/_admin";
 
@@ -71,6 +73,13 @@ namespace TfsConfigureNewFeaturesQuerierSeleniumApp
                                 };
                                 results.ConfigurableProjects.Add(configurableProj);
                                 SaveScreenshot(webDriver, $@".\Results\Configurable\{projectName}.png");
+
+                                if (configureIfPossible)
+                                {
+                                    configureButton.Click();
+                                    System.Threading.Thread.Sleep(TimeSpan.FromSeconds(5));
+                                    SaveScreenshot(webDriver, $@".\Results\Configurable\{projectName}-AfterConfiguration.png");
+                                }
                             }
                             else
                             {

@@ -3,6 +3,7 @@
   "collectionName": "DefaultCollection",
   "http": "http",
   "projectNamesFilePath": ".\\projects.txt",
+  "configureIfPossible": "false",
   "ImplicitWaitSeconds": 20,
   "MaxProjectsToScan": 1000
 }
